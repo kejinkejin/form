@@ -4,17 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-
+import { DatadrivenComponent } from './datadriven/datadriven.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import{HttpserviceService} from './httpservice.service';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DatadrivenComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HttpserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
